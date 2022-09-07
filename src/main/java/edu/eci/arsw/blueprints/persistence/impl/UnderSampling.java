@@ -7,7 +7,7 @@ import edu.eci.arsw.blueprints.persistence.Filter;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Service
+//@Repository
 public class UnderSampling implements Filter {
 
     /**

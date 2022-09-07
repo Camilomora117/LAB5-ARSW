@@ -3,12 +3,13 @@ package edu.eci.arsw.blueprints.persistence.impl;
 import edu.eci.arsw.blueprints.model.Blueprint;
 import edu.eci.arsw.blueprints.model.Point;
 import edu.eci.arsw.blueprints.persistence.Filter;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Repository
 public class Redundancy implements Filter {
 
     /**
