@@ -1,11 +1,16 @@
 package edu.eci.arsw.blueprints.model;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Component;
+
+import javax.servlet.annotation.WebFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
 
+@Component
 public class Blueprint {
 
     private String author=null;

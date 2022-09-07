@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
  *
  * @author hcadavid
  */
-@Service
+@Service("bluePrintsService")
 public class BlueprintsServices {
 
     @Autowired
@@ -25,10 +25,20 @@ public class BlueprintsServices {
     @Autowired
     Filter filter;
 
+    /**
+     * Añade un Blue print
+     * @param bp Blueprint
+     * @throws BlueprintPersistenceException
+     */
     public void addNewBlueprint(Blueprint bp) throws BlueprintPersistenceException {
         bpp.saveBlueprint(bp);
     }
 
+    /**
+     * Retorna todos los bluePrints
+     * @return Set que contiene los bluePrints
+     * @throws BlueprintPersistenceException
+     */
     public Set<Blueprint> getAllBlueprints() throws BlueprintPersistenceException {
         return bpp.getAllBlueprints();
     }
