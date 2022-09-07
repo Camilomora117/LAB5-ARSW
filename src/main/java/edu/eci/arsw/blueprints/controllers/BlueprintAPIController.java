@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @author hcadavid
  */
 public class BlueprintAPIController {
-    
-    
-    
-    
-    
+
 }
 
