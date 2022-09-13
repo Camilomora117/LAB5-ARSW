@@ -139,6 +139,25 @@ Usamos el comando get para mostrar el Blueprint que añadimos en el punto anteri
 
 4. Agregue soporte al verbo PUT para los recursos de la forma '/blueprints/{author}/{bpname}', de manera que sea posible actualizar un plano determinado.
 
+Primero añadimos un blueprint:
+
+![image](https://user-images.githubusercontent.com/98135134/189797493-69676f1e-2db0-4a73-84d6-937f06883f65.png)
+
+Consultamos el blueprint agregado:
+
+![image](https://user-images.githubusercontent.com/98135134/189797584-c4249ebb-0dde-4a40-8dc4-1c2a7369b7fa.png)
+
+
+Actualizamos el plano del objeto agreagado con el metodo put:
+
+![image](https://user-images.githubusercontent.com/98135134/189798066-3903ffcb-1fb3-4a44-b3c1-b72b65ee2270.png)
+
+
+Consultamos que se halla actualizado el plano:
+
+![image](https://user-images.githubusercontent.com/98135134/189798130-24212a6e-acca-4d59-bd3f-abf596071f2b.png)
+
+
 
 ### Parte III
 
