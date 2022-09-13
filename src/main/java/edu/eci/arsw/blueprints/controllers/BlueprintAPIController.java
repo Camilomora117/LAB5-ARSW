@@ -69,5 +69,17 @@ public class BlueprintAPIController {
         }
     }
 
+    @RequestMapping(path = "/create",method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseEntity<?> addBlueprint(@RequestBody Blueprint blueprint) {
+        try {
+            blueprintsServices.addNewBlueprint(blueprint);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (BlueprintPersistenceException ex) {
+            Logger.getLogger(BlueprintAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("No se pudo Añadir el Blueprint",HttpStatus.FORBIDDEN);
+        }
+    }
+
 }
 
