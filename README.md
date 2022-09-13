@@ -85,6 +85,24 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
  	
 	}
 	```	
+	
+
+Creamos el siguiente metodo post:
+
+
+    ```
+    @RequestMapping(path = "/create",method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<?> addBlueprint(@RequestBody Blueprint blueprint) {
+        try {
+            blueprintsServices.addNewBlueprint(blueprint);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } catch (BlueprintPersistenceException ex) {
+            Logger.getLogger(BlueprintAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("No se pudo Añadir el Blueprint",HttpStatus.FORBIDDEN);
+        }
+    }
+    ```
 
 
 2.  Para probar que el recurso ‘planos’ acepta e interpreta
