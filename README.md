@@ -90,7 +90,7 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 Creamos el siguiente metodo post:
 
 
-    ```
+    
     @RequestMapping(path = "/create",method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<?> addBlueprint(@RequestBody Blueprint blueprint) {
@@ -102,7 +102,7 @@ Creamos el siguiente metodo post:
             return new ResponseEntity<>("No se pudo Añadir el Blueprint",HttpStatus.FORBIDDEN);
         }
     }
-    ```
+    
 
 
 2.  Para probar que el recurso ‘planos’ acepta e interpreta
