@@ -102,6 +102,14 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 	
 
 	Nota: puede basarse en el formato jSON mostrado en el navegador al consultar una orden con el método GET.
+	
+Usamos el comando curl para probar el metodo post:
+
+```
+curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://http://localhost:8080/v1/blueprints/create -d "{"""author""":"""messi""","""name""":"""bp1"""",""""points""":[{"""x""":20,"""y""":10}]}"
+```
+
+![image](https://user-images.githubusercontent.com/98135134/189794495-f8a5b279-f801-44ca-9356-479acfc7f6d7.png)
 
 
 3. Teniendo en cuenta el autor y numbre del plano registrado, verifique que el mismo se pueda obtener mediante una petición GET al recurso '/blueprints/{author}/{bpname}' correspondiente.
