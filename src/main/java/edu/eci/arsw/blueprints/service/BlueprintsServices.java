@@ -35,6 +35,17 @@ public class BlueprintsServices {
     }
 
     /**
+     *
+     * @param author blueprint's author
+     * @param name blueprint's name
+     * @return the blueprint of the given name created by the given author
+     * @throws BlueprintNotFoundException if there is no such blueprint
+     */
+    public void updateBlueprint(String author,String name, Blueprint bp) throws BlueprintNotFoundException, BlueprintPersistenceException {
+        bpp.updateBlueprint(author, name, bp);
+    }
+
+    /**
      * Retorna todos los bluePrints
      * @return Set que contiene los bluePrints
      * @throws BlueprintPersistenceException

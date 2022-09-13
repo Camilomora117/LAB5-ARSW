@@ -18,6 +18,17 @@ public interface BlueprintsPersistence {
      */
     public void saveBlueprint(Blueprint bp) throws BlueprintPersistenceException;
 
+
+    /**
+     * Update Blueprint
+     * @param author blueprint's author
+     * @param bprintname blueprint's author
+     * @param bp the new blueprint
+     * @throws BlueprintPersistenceException
+     */
+    public void updateBlueprint(String author,String bprintname, Blueprint bp) throws BlueprintPersistenceException, BlueprintNotFoundException;
+
+
     /**
      *
      * @throws BlueprintPersistenceException if a blueprint with the same name already exists,
