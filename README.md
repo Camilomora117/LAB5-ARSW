@@ -106,13 +106,18 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 Usamos el comando curl para probar el metodo post:
 
 ```
-curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://http://localhost:8080/v1/blueprints/create -d "{"""author""":"""messi""","""name""":"""bp1"""",""""points""":[{"""x""":20,"""y""":10}]}"
+curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://localhost:8080/v1/blueprints/create -d "{"""author""":"""messi""","""name""":"""bp1"""",""""points""":[{"""x""":20,"""y""":10}]}"
 ```
 
 ![image](https://user-images.githubusercontent.com/98135134/189794495-f8a5b279-f801-44ca-9356-479acfc7f6d7.png)
 
 
 3. Teniendo en cuenta el autor y numbre del plano registrado, verifique que el mismo se pueda obtener mediante una petición GET al recurso '/blueprints/{author}/{bpname}' correspondiente.
+
+Usamos el comando get para mostrar el Blueprint que añadimos en el punto anterior:
+
+![image](https://user-images.githubusercontent.com/98135134/189794851-543ef547-8820-4f15-9ed0-eb423f3aee7e.png)
+
 
 4. Agregue soporte al verbo PUT para los recursos de la forma '/blueprints/{author}/{bpname}', de manera que sea posible actualizar un plano determinado.
 
